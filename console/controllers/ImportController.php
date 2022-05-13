@@ -9,7 +9,7 @@ use common\models\Category;
 
 class ImportController extends Controller
 {
-    private $url = 'https://gitlab.com/prog-positron/test-app-vacancy/-/raw/master/books.json';
+    private $url = Yii::$app->params['bookParseUrl'];
     
     public function actionStart()
     {   
