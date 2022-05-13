@@ -178,7 +178,6 @@ class IndexController extends Controller
     }
 
     public function actionSearch() {
-
         $title = $this->request->get('search-title');
         $authors = $this->request->get('search-authors');
         $status = $this->request->get('search-status');

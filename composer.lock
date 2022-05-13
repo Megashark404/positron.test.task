@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d22b902b148b28298601ec014616fdf3",
+    "content-hash": "ae4144a66f48545b138c7bcba314aae4",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -339,6 +339,57 @@
                 "source": "https://github.com/ezyang/htmlpurifier/tree/v4.14.0"
             },
             "time": "2021-12-25T01:21:49+00:00"
+        },
+        {
+            "name": "kekaadrenalin/yii2-module-recaptcha-v3",
+            "version": "1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kekaadrenalin/yii2-module-recaptcha-v3.git",
+                "reference": "411c333cf267237bc711d01363fba154d20c69e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kekaadrenalin/yii2-module-recaptcha-v3/zipball/411c333cf267237bc711d01363fba154d20c69e7",
+                "reference": "411c333cf267237bc711d01363fba154d20c69e7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "yiisoft/yii2": "~2.0.15"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "kekaadrenalin\\recaptcha3\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "kekaadrenalin",
+                    "email": "kekapor@outlook.com"
+                }
+            ],
+            "description": "This is reCAPTCHA v3 for Yii2.",
+            "keywords": [
+                "Yii2 recaptcha",
+                "Yii2 recaptcha 3",
+                "Yii2 recaptcha v3",
+                "captcha",
+                "module",
+                "recaptcha 3",
+                "recaptcha v3",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/kekaadrenalin/yii2-module-recaptcha-v3/issues",
+                "source": "https://github.com/kekaadrenalin/yii2-module-recaptcha-v3"
+            },
+            "time": "2019-02-22T09:14:06+00:00"
         },
         {
             "name": "npm-asset/bootstrap",

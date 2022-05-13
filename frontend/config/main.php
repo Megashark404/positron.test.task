@@ -50,6 +50,14 @@ return [
             ],
         ],
         
+        'reCaptcha3' => [
+            'class'      => 'kekaadrenalin\recaptcha3\ReCaptcha',
+            'site_key'   => '6Lf5jecfAAAAAOdtpQMKzBmCFg7OfeJqiEL1bC0b',
+            'secret_key' => '6Lf5jecfAAAAAJOlpOFOdBbgdL1Scf3KSXvhFth6',
+        ],
+
+
+        
     ],
     'params' => $params,
 ];

@@ -18,6 +18,9 @@ class Feedback extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+
+    public $reCaptcha;
+
     public static function tableName()
     {
         return 'feedback';
@@ -34,6 +37,7 @@ class Feedback extends \yii\db\ActiveRecord
             ['email', 'email'],
             [['email', 'name'], 'string', 'max' => 32],
             [['phone'], 'string', 'max' => 11],
+            [['reCaptcha'], \kekaadrenalin\recaptcha3\ReCaptchaValidator::className(), 'acceptance_score' => 0.5]
         ];
     }
 
