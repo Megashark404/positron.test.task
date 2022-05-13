@@ -2,6 +2,7 @@
 
 namespace console\controllers;
 
+use Yii;
 use yii\console\Controller;
 use yii\helpers\Json;
 use common\models\Book;
@@ -9,14 +10,19 @@ use common\models\Category;
 
 class ImportController extends Controller
 {
-    private $url = Yii::$app->params['bookParseUrl'];
+    
+
+    public function actionTest() {
+        var_dump(Yii::$app->params);
+    }
     
     public function actionStart()
     {   
         $count = 1;
 
         // парсим список книг
-        $json = file_get_contents($this->url);
+        $url = Yii::$app->params['bookParseUrl'];
+        $json = file_get_contents($url);
         $books = Json::decode($json);           
 
         // в цикле перебираем книги
