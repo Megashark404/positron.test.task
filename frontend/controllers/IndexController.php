@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use Yii;
 use common\models\Category;
 use common\models\Book;
 use yii\data\ActiveDataProvider;
