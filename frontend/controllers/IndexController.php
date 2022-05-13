@@ -153,7 +153,17 @@ class IndexController extends Controller
         ]);
 
         $booksDataProvider = new ActiveDataProvider([
-            'query' => Book::find()->joinWith('categories')->where(['category_id' => $id]),           
+            'query' => Book::find()->joinWith('categories')->where(['category_id' => $id]),   
+            'pagination' => [
+                'pageSize' => Yii::$app->params['booksPerPage']
+            ],
+            /*
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC,
+                ] 
+            ],
+            */
         ]);
 
 
