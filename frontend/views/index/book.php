@@ -42,6 +42,24 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 
+    <div class="row mt-3">
+        <div class="col">
+            <?= ListView::widget([
+                'dataProvider' => $fellowBooksDataProvider,
+                'itemOptions' => ['class' => 'item'],
+                /*'itemView' => function ($model, $key, $index, $widget) {
+                    return Html::a(Html::encode($model->name), ['view', 'id' => $model->id]);*/
+                'itemView' => '_book_item',
+                'layout' => '<h5>Other books in this category/categories:</h5><div class="d-flex flex-wrap">{items}</div>{pager}',
+                'emptyText' => '',
+                'itemOptions' => [
+                    'tag' => false
+                ],
+                
+            ]) ?>
+        </div>
+    </div>
+
    
    
    

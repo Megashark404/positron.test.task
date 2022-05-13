@@ -178,11 +178,25 @@ class IndexController extends Controller
 
     public function actionBook($isbn) {
 
-
         $model = Book::findOne($isbn);
 
+        foreach ($model->categories as $category) {
+            $bookCategories[] = $category->id;
+        }
+
+        // выбираем другие книги из этой категории/категорий
+        $fellowBooksDataProvider = new ActiveDataProvider([
+            'query' => Book::find()->joinWith('categories')
+                ->where(['category_id' => $bookCategories])
+                ->andWhere(['<>','isbn', $isbn]),   
+            'pagination' => [
+                'pageSize' => 4
+            ],
+        ]);
+
         return $this->render('book', [
-            'model' => $model
+            'model' => $model,
+            'fellowBooksDataProvider' => $fellowBooksDataProvider
         ]);
 
 
