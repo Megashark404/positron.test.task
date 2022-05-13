@@ -13,7 +13,7 @@
 
 ```php
 return [
-    'frontendUrl' => 'http://backend/'
+    'backendUrl' => 'http://backend/'
 ];
 ```
 
